@@ -4,7 +4,23 @@ var largura = 0;
 var vidas = 1;
 var tempo = 10;
 
+var criaMoscaTempo = 1500;
+
 var nivel = window.location.search; // vai recuperar somente o nível
+nivel = nivel.replace('?', ''); // "apaga a variavel ?"
+
+//logica para os niveis
+
+if (nivel === 'normal') {
+  //1500
+  criaMoscaTempo = 1500;
+} else if (nivel === 'dificil') {
+  //1000
+  criaMoscaTempo = 1000;
+} else if (nivel === 'chucknorris') {
+  //750
+  criaMoscaTempo = 750;
+}
 
 function ajustaTamanhoJogo() {
   //função para pegar o valor instantaneo do tamanho da tela
