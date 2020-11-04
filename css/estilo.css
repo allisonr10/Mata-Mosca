@@ -1,4 +1,52 @@
+body {
+  background-image: url(../imagens/bg.jpg);
+  background-repeat: no-repeat;
+}
+
+/*Tamanho da mosca*/
 .mosca1 {
   width: 50px;
   height: 50px;
+  position: absolute;
+}
+.mosca2 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+.mosca3 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+}
+/*Lado da mosca*/
+.ladoA {
+  transform: scaleX(1); /* se quiser inverter no eixo y*/
+}
+.ladoB {
+  transform: scaleX(-1); /* se quiser inverter no eixo x*/
+}
+
+/* Área do jogo*/
+
+.painel {
+  position: absolute;
+  width: 190px;
+  padding: 10px;
+  left: 0px;
+  bottom: 0px;
+  border-top: solid 1 px #fff;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+/*Área vida e Cronometro*/
+
+.vida {
+  float: left;
+}
+.cronometro {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
 }

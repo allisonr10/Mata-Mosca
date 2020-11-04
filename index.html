@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mata Mosca</title>
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/estilo.css" />
   </head>
   <body onresize="ajustaTamanhoJogo()">
-    <img class="mosca1" src="imagens/mosca.png" alt="" />
-    <script src="js/script.js"></script>
+    <div class="painel">
+      <div class="vidas">
+        <img id="v1" src="imagens/coracao_cheio.png" alt="" />
+        <img id="v2" src="imagens/coracao_cheio.png" alt="" />
+        <img id="v3" src="imagens/coracao_cheio.png" alt="" />
+      </div>
+
+      <div class="cronometro">
+        Tempo Restante: <span id="cronometro"></span>
+      </div>
+    </div>
+
+    <script>
+      setInterval(function () {
+        posicaoRandomica();
+      }, 2000);
+    </script>
   </body>
 </html>
