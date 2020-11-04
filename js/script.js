@@ -4,7 +4,7 @@ var largura = 0;
 var vidas = 1;
 var tempo = 10;
 
-var pontos;
+var nivel = window.location.search; // vai recuperar somente o nível
 
 function ajustaTamanhoJogo() {
   //função para pegar o valor instantaneo do tamanho da tela
@@ -17,6 +17,8 @@ var cronometro = setInterval(function () {
   tempo -= 1;
   if (tempo < 0) {
     clearInterval(cronometro);
+    clearInterval(criarMosca);
+    window.location.href = 'vitoria.html';
   } else {
     document.getElementById('cronometro').innerHTML = tempo;
   }

@@ -21,7 +21,9 @@
     </div>
 
     <script>
-      setInterval(function () {
+      document.getElementById('cronometro').innerHTML = tempo;
+
+      var criarMosca = setInterval(function () {
         posicaoRandomica();
       }, 2000);
     </script>
